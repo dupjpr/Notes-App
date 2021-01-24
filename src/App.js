@@ -6,8 +6,17 @@ import NotesForm from "./components/NotesForm";
 function App() {
 
   const [notes, setNotes] = useState([]);
+  const [editNote, setEditNote] = useState([]);
+  
+  const handleEdit = (id) => {
+    const editNote = notes.filter((note) => note.id === id );
+    const newNotes = notes.filter((note) => note.id !== id);
+    setNotes(newNotes);
+    setEditNote(editNote);
+  }
 
-  const handleSubmit = (e, note, setNote) => {
+  const handleSubmit = (e, note) => {
+    console.log(note);
     e.preventDefault();
     setNotes([...notes, {note:note, id:Math.random(), date:new Date()}])
     const formInput = document.querySelector('.notesForm-input');
@@ -22,8 +31,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Notes notes={notes} handleDelete={handleDelete}/>
-      <NotesForm handleSubmit={handleSubmit}/>
+      <Notes notes={notes} handleDelete={handleDelete} handleEdit={handleEdit}/>
+      <NotesForm handleSubmit={handleSubmit} editNote={editNote}/>
     </div>
   );
 }
