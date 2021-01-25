@@ -1,0 +1,108 @@
+.note-section{
+    width: 93%;
+    margin: 3% auto;
+}
+
+.note-section h2{
+    width: 30%;
+    text-align: center;
+    background-color:#e9e9e9;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+
+}
+
+.notes{
+    width: 100%;
+    margin: 0 auto;
+    height: 300px;
+    background-color:#e9e9e9;
+    overflow: auto;
+    
+}
+
+.note {
+    width: 98%;
+    height: auto;
+    margin: 1.5% auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    background-color:#fcf8c8;
+   
+}
+
+.colorTag{
+    width: 1%;
+    height: auto;
+    background-color: red;
+    border-radius: 50px;
+    padding: 1% 0;
+}
+
+.note-note {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    width:78%;
+    height: auto;
+    font-family: 'PT Serif', serif;
+    font-size: 1.2rem;
+    padding-left: 1%;
+}
+
+.note-tools {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 1% 0;
+}
+
+.note-tools span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: #00c9b7;
+    border-radius: 50%;
+    margin-right: 5px;
+    color: black;
+    -webkit-box-shadow: 0px 0px 6px -2px rgba(0,0,0,0.89); 
+    box-shadow: 0px 0px 6px -2px rgba(0,0,0,0.89);
+    opacity: 0;
+}
+
+.note:hover .note-tools span{
+    opacity: 1;
+}
+
+.note-tools span:hover{
+    color:  #262525;
+    background-color: #e9e9e9;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
