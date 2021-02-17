@@ -12,6 +12,7 @@ The application does not store the notes with localStorage of JavaScript, so the
 ## Built With :atom:
 
 * React.
+* JavaScript.
 * Html.
 * Css.
 
